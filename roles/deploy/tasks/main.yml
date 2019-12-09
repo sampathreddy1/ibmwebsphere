@@ -1,0 +1,22 @@
+---
+
+- name:          Copy zip to webapps folder
+  copy:
+    src:         {{ tmp_dir }}/{{ file_name }}
+    dest:        {{ webapps_folder }}/
+
+- name:          Unzip WAR file
+  unarchive:
+    src:         {{ webapps_folder }}/{{ file_name }}
+    dest:        {{ webapps_folder }}/
+    copy:        no
+    mode:        0755
+
+- name: Delete remote war file
+  file: 
+    path:        {{ webapps_folder }}/{{ file_name }}
+    state:       absent
+ 
+   handlers:
+     name: Restart tomcat7
+     service: name=tomcat7 state=restarted
