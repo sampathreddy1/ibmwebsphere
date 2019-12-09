@@ -1,0 +1,14 @@
+---
+- name:                    Install WebSphere Application Server - Network Deployment
+  hosts:                   wasservers
+  become_user: root
+  become: yes
+ 
+
+  roles:
+     - roles/installation-manager-install
+     - roles/was-nd-install
+     - roles/was-nd-fix-install
+     - roles/was-java-install
+     - roles/was-dmgr-create-profile
+     - roles/was-dmgr-start

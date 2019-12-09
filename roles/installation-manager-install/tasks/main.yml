@@ -1,0 +1,8 @@
+---
+
+
+- name:          Setup Operating System
+  include_tasks: setup_os.yml
+
+- name:          Install IBM Installation Manager
+  include_tasks: install_iim.yml

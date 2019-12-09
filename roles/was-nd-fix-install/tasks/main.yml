@@ -1,0 +1,4 @@
+---
+
+- name:          Install WebSphere Application Server - Fixes
+  include_tasks: install_was_fixes.yml
