@@ -6,8 +6,8 @@
  
 
   roles:
-     - roles/installation-manager-install
-    # - roles/was-nd-install
+     #- roles/installation-manager-install
+      - roles/was-nd-install
     # - roles/was-nd-fix-install
     # - roles/was-java-install
     # - roles/was-dmgr-create-profile
