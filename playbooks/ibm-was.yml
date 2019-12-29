@@ -9,6 +9,10 @@
      #- roles/installation-manager-install
      # - roles/was-nd-install
     # - roles/was-nd-fix-install
-      - roles/was-java-install
+     # - roles/was-java-install
     # - roles/was-dmgr-create-profile
     # - roles/was-dmgr-start
+    - roles/was-dmgr-config-jvm
+    #- roles/was-dmgr-restart
+    #- roles/was-profile-create
+    #- roles/was-nodeagent-start
